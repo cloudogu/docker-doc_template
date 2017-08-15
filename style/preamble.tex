@@ -1,0 +1,48 @@
+
+% Switch to german spelling
+\usepackage[ngerman]{babel} 
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{fontspec}
+
+% Use color for fonts etc.
+\usepackage{xcolor}
+
+% Main color of Cloudogu
+\definecolor{maincolor}{HTML}{23A3DD}
+
+% Display code listings
+\usepackage{listings}
+
+% For title background image and logo on every page
+\usepackage{wallpaper}
+
+% set linespacing to onehalf globally
+\usepackage[onehalfspacing]{setspace}
+
+% set margins
+\usepackage{geometry}
+\geometry{
+  left=3cm,
+  right=2.8cm,
+  top=4cm
+}
+
+% used for hyperlinks
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+% used for tables
+\usepackage{longtable}
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
