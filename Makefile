@@ -21,6 +21,7 @@ pdf:
 	-N \
 	--toc \
 	--self-contained \
+	--filter pandoc-plantuml-filter \
 	--latex-engine=xelatex
 
 .PHONY: help pdf 

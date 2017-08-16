@@ -1,3 +1,3 @@
-% Mission Statement
+% Pandoc Example
 % Cloudogu GmbH
 % August 2017
