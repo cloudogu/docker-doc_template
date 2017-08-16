@@ -1,5 +1,5 @@
 # pandoc_example
-A simple example for generating a PDF file from markdown files with `cloudogu/pandoc_buildslave` container.
+A simple example for generating a PDF file from markdown files with `cloudogu/pandoc` container.
 
 ## Prerequisites
 This example uses the docker container `cloudogu/pandoc`. You find instructions for the installation [here](https://github.com/cloudogu/docker-pandoc).
