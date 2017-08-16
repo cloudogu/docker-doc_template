@@ -12,18 +12,17 @@ $endfor$
 \setmainfont[Path=fonts/]{NeoSansPro-Medium.otf}
 
 \newfontfamily\headingfont[Path=fonts/]{NeoSansPro-Medium.otf}
-% \titleformat{\chapter}
-%    {\LARGE\headingfont \color{maincolor}}{\thechapter}{20pt}{\LARGE\headingfont}
-% \titleformat{\section}{\Large\headingfont \color{maincolor}}
-% \titleformat*{\subsection}{\large\headingfont \color{maincolor}}
+\titleformat{\chapter}{\LARGE\headingfont \color{maincolor}}{\thechapter}{20pt}{\LARGE\headingfont}
+\titleformat*{\section}{\Large\headingfont \color{maincolor}}
+\titleformat*{\subsection}{\large\headingfont \color{maincolor}}
 
 \makeatletter
 \renewcommand{\maketitle}{
   \begin{titlepage}
     \begin{flushleft}
 
-      \URCornerWallPaper{0.32}{style/images/cloudogu-logo.pdf}
-      \ThisULCornerWallPaper{1.0}{style/images/clouds-on-a-string.eps}
+      \URCornerWallPaper{0.32}{template/images/cloudogu-logo.pdf}
+      \ThisULCornerWallPaper{1.0}{template/images/clouds-on-a-string.pdf}
       
       \vspace*{11.1cm}
 
