@@ -2,9 +2,11 @@
 
 ## Pandoc Markdown
 
-Lorem ipsum dolor sit ament.
+A complete reference to Pandoc's markdown syntax can be found at [http://pandoc.org/MANUAL.html](http://pandoc.org/MANUAL.html).
 
-## Options for pandoc_buildslave container
+You can even reference to other headers in markdown, like [Mission Statement](#mission-statement).
+
+## Command line options for the cloudogu/pandoc container
 
 Lorem ipsum dolor sit ament.
 
