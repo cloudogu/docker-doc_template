@@ -47,3 +47,27 @@
 % using explicit options in \includegraphics[width, height, ...]{}
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 
+\usepackage{float}
+\floatplacement{figure}{H}
+
+\usepackage{lastpage}
+\usepackage{scrpage2} 
+\ifoot[]{\color{maincolor} \textcopyright 2017 Cloudogu GmbH}
+\cfoot[]{} 
+\ofoot[\pagemark]{\color{maincolor} \thepage\ von \pageref{LastPage}} 
+\pagestyle{scrheadings}
+
+\renewcommand{\chapterpagestyle}{scrheadings}
+
+\usepackage{scrhack}
+\usepackage{tocstyle} 
+
+\usepackage[defaultsans]{droidsans}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+\addtokomafont{sectioning}{\color{maincolor}}
+
+\setkomafont{pagefoot}{%
+\normalfont
+}
