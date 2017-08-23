@@ -3,8 +3,6 @@ MAINTAINER Thomas Grosser <thomas.grosser@cloudogu.com>
 
 RUN mkdir -p /usr/local/pandoc
 
-# ADD ./template/preamble.tex /usr/local/pandoc/template/preamble.tex
-# ADD ./template/template.tex /usr/local/pandoc/template/template.tex
 COPY template /usr/local/pandoc/template/
 
 WORKDIR /data
