@@ -47,6 +47,32 @@ $endfor$
   }
   $endif$
 
-    $body$
+  $body$
+
+  \newcommand{\makeback}{
+    \clearpage
+    \begingroup
+      \renewcommand*{\chapterpagestyle}{empty}
+      \pagestyle{empty}
+      \begin{flushright}
+
+        \URCornerWallPaper{0.32}{/usr/local/pandoc/template/images/cloudogu-logo.pdf}
+        
+        \vspace*{17cm}
+
+        Cloudogu GmbH \\
+        Brabandtstr. 9-10 \\
+        D-38100 Braunschweig
+
+        \vspace*{0.3cm}
+
+        hello@cloudogu.com \\
+        www.cloudogu.com
+        
+      \end{flushright}
+    \clearpage
+    \endgroup
+  }
+  \makeback
   
 \end{document}
