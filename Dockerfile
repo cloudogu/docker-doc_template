@@ -18,7 +18,7 @@ ENTRYPOINT ["pandoc", \
 	"--variable=documentclass:scrreprt", \
 	"--number-sections", \
 	"--toc", \
-	"--filter pandoc-plantuml-filter", \
+	"--filter=pandoc-plantuml-filter", \
 	"--latex-engine=xelatex"]
 
 CMD ["--help"]
