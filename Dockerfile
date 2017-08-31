@@ -12,7 +12,7 @@ ENTRYPOINT ["pandoc", \
 	"--verbose", \
     "--template=/usr/local/pandoc/template/template.tex", \
     "--include-in-header=/usr/local/pandoc/template/preamble.tex", \
-	"-M listings=true", \
+	"--listings", \
 	"--highlight-style=pygments", \
 	"--variable=fontsize:12pt", \
 	"--variable=documentclass:scrreprt", \
