@@ -44,7 +44,7 @@
   showtabs=false,                  % show tabs within strings adding particular underscores
   stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
   stringstyle=\color{mymauve},     % string literal style
-  tabsize=2,	                   % sets default tabsize to 2 spaces
+  tabsize=2,	                     % sets default tabsize to 2 spaces
   title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
 }
 
@@ -58,9 +58,16 @@
 \usepackage{geometry}
 \geometry{
   left=3cm,
-  right=2.8cm,
+  right=2cm,
   top=4cm
 }
+% disable paragraph tab
+\usepackage{blindtext}
+\setlength{\parindent}{0pt}
+
+% change caption color and size
+\usepackage{caption}
+\captionsetup{font=scriptsize,labelfont={color=gray,bf},textfont={color=gray}}
 
 % used for hyperlinks
 \usepackage[pdfborder={0 0 0}]{hyperref}
@@ -69,7 +76,7 @@
 \usepackage{longtable}
 \usepackage{booktabs}
 
-\usepackage{graphicx}
+\usepackage[]{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -77,14 +84,16 @@
 % Scale images if necessary, so that they will not overflow the page
 % margins by default, and it is still possible to overwrite the defaults
 % using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% set max width and height of images to 12cm
+\setkeys{Gin}{width=12cm,height=12cm,keepaspectratio}
 
 \usepackage{float}
 \floatplacement{figure}{H}
 
 \usepackage{lastpage}
 \usepackage{scrpage2} 
-\ifoot[]{\color{maincolor} \textcopyright 2017 Cloudogu GmbH}
+\ifoot[]{ \color{maincolor} \tiny {\textcopyright} 2017 Cloudogu GmbH}
 \cfoot[]{} 
 \ofoot[\pagemark]{\color{maincolor} \thepage\ von \pageref{LastPage}} 
 \pagestyle{scrheadings}
