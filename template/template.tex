@@ -21,7 +21,10 @@ $endfor$
       \color{maincolor}
 
       \@author \\
-      \@title
+      \@title \\
+      \vspace*{0.3cm}
+      \@date
+
       
     \end{flushleft}
   \end{titlepage}
@@ -32,6 +35,7 @@ $endfor$
   $if(title)$
     \title{\Huge \textbf{$title$}}
     \author{\Large \textbf{$for(author)$$author$$sep$ \and $endfor$}}
+    \date{\small \textbf{$date$}}
     \maketitle
   $endif$
 
