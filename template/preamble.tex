@@ -1,11 +1,25 @@
 
 % Switch to german spelling
-\usepackage[ngerman]{babel} 
+\usepackage[ngerman]{babel}
+
+\usepackage[default,osfigures,scale=0.95]{opensans}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{iftex}
+\ifPDFTeX
+   \usepackage[utf8]{inputenc}
+   \usepackage[T1]{fontenc}
+\else
+   \ifXeTeX
+     \usepackage{fontspec}
+   \else 
+     \usepackage{luatextra}
+   \fi
+   \defaultfontfeatures{Ligatures=TeX}
+\fi
 
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage{fontspec}
-\usepackage{droid}
 
 % Use color for fonts etc.
 \usepackage{xcolor}
@@ -102,9 +116,6 @@
 
 \usepackage{scrhack}
 \usepackage{tocstyle} 
-
-\usepackage[default,osfigures,scale=0.95]{opensans}
-\usepackage[T1]{fontenc}
 
 \addtokomafont{sectioning}{\color{maincolor}}
 

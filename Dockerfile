@@ -1,4 +1,4 @@
-FROM cloudogu/pandoc:0.6.0
+FROM cloudogu/pandoc:0.7.0
 MAINTAINER Thomas Grosser <thomas.grosser@cloudogu.com>
 
 RUN mkdir -p /usr/local/pandoc
