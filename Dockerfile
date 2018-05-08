@@ -1,4 +1,4 @@
-FROM cloudogu/pandoc:0.7.0
+FROM cloudogu/pandoc:0.6.0
 MAINTAINER
 LABEL name="cloudogu/doc_template" \
       version="0.16" \
