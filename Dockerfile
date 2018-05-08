@@ -1,5 +1,8 @@
 FROM cloudogu/pandoc:0.7.0
-MAINTAINER Thomas Grosser <thomas.grosser@cloudogu.com>
+MAINTAINER
+LABEL name="cloudogu/doc_template" \
+      version="0.16" \
+      maintainer="Thomas Grosser <thomas.grosser@cloudogu.com>"
 
 RUN mkdir -p /usr/local/pandoc
 
