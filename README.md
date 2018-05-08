@@ -3,11 +3,11 @@
 ## About this Repository
 **Name:** cloudogu/doc_template
 
-**Version** 0.16
+**Version** 0.16.0 | [Docker Hub](https://hub.docker.com/r/cloudogu/doc_template/tags/)
 
 **Description** A docker container for generating a PDF with Cloudogu Corporate Design from markdown files.
 
-**Size:** 7.31Gb
+**Size:** 7.31GB
 
 ## Requirements
 -  Docker [https://www.docker.com/get-docker](https://www.docker.com/get-docker)
