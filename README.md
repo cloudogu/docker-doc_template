@@ -1,5 +1,5 @@
 ![logo](resources/images/markdown-pdf.png)
-# Cloudogu pandoc-template
+# Cloudogu doc_template
 ## About this Repository
 **Name:** cloudogu/doc_template
 
