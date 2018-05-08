@@ -1,7 +1,7 @@
 ![logo](resources/images/markdown-pdf.png)
 # Cloudogu pandoc-template
 ## About this Repository
-**Name:** cloudogu/pandoc-template
+**Name:** cloudogu/doc_template
 
 **Version** 0.16
 
