@@ -1,5 +1,5 @@
 ![logo](resources/images/markdown-pdf.png)
-## Cloudogu pandoc-template
+# Cloudogu pandoc-template
 ### About this Repository
 **Name:** cloudogu/pandoc-template
 
@@ -23,22 +23,22 @@
 
 ## Features
 
-- Title page
+- Add a title page
 
 `% Testpage
  % Cloudogu EcoSystem`
 
 
-- PlantUml
+- Generate a PDF with PlantUml
 
 `docker run --rm -e PLANTUML_SERVER=https://ecosystem.cloudogu.com -v $(pwd):/data -w /data cloudogu/doc-template:0.16 *.md
 `
 
 - Syntax highlighting
 
-see [sample.md](resources/sample/sample.md) for more information.
+See [sample.md](resources/sample/sample.md) for more information.
 
-and [sample.pdf](resources/sample/sample.pdf) for the converted pdf.
+Or [sample.pdf](resources/sample/sample.pdf) for the converted pdf.
 
 ## Using special characters
 
