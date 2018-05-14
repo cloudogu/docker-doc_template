@@ -1,5 +1,7 @@
 ![logo](resources/images/markdown-pdf.png)
 # Cloudogu doc_template
+[![](https://images.microbadger.com/badges/image/cloudogu/doc_template.svg)](https://hub.docker.com/r/cloudogu/doc_template/)
+
 ## About this Repository
 **Name:** cloudogu/doc_template
 
