@@ -42,6 +42,15 @@ See [sample.md](resources/sample/sample.md) for more information.
 
 Or [sample.pdf](resources/sample/sample.pdf) for the converted pdf.
 
+## Using the convert.sh
+
+the `convert.sh` automatically converts the ß. You can ignore the
+*using special characters* section when converting with this script.
+
+Possible options are:
+`./convert.sh myDir/myMDFiles` to convert all markdown files
+`./convert.sh myDir/myMDFiles sample.md` to convert a specific file
+
 ## Using special characters
 
 Currently the ß must be encoded with `\"s`.
