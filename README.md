@@ -47,8 +47,10 @@ Or [sample.pdf](resources/sample/sample.pdf) for the converted pdf.
 the `convert.sh` automatically converts the ß. You can ignore the
 *using special characters* section when converting with this script.
 
-Possible options are:
+#### Possible options are:
+
 `./convert.sh myDir/myMDFiles` to convert all markdown files
+
 `./convert.sh myDir/myMDFiles sample.md` to convert a specific file
 
 ## Using special characters
