@@ -1,13 +1,11 @@
 % Switch to german spelling
 \usepackage[ngerman]{babel}
-
+% Sets the correct encoding and font
 \usepackage{titlesec}
 \usepackage{titling}
-
-% Sets the correct encoding and font
 \usepackage{fontspec}
-\usepackage[default,osfigures,scale=0.95]{opensans}
-\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
 
 % Use color for fonts etc.
 \usepackage{xcolor}
@@ -60,20 +58,20 @@ title=\lstname                   % show the filename of files included with \lst
 % set margins
 \usepackage{geometry}
 \geometry{
-left=3cm,
-right=2.8cm,
-top=4cm
+  left=3cm,
+  right=2cm,
+  top=4cm
 }
+% disable paragraph tab
+\usepackage{blindtext}
+\setlength{\parindent}{0pt}
+
+% change caption color and size
+\usepackage{caption}
+\captionsetup{font=scriptsize,labelfont={color=gray,bf},textfont={color=gray}}
 
 % used for hyperlinks
 \usepackage[pdfborder={0 0 0}]{hyperref}
-\hypersetup{
-colorlinks=true,
-linkcolor={maincolor},
-citecolor={maincolor},
-filecolor={maincolor},
-urlcolor={maincolor}
-}
 
 % used for tables
 \usepackage{longtable}
@@ -91,10 +89,10 @@ urlcolor={maincolor}
 
 \usepackage{float}
 \floatplacement{figure}{H}
-% Sets a footer with copywrite and page information
+
 \usepackage{lastpage}
 \usepackage{scrpage2}
-\ifoot[]{\color{maincolor} \textcopyright 2018 Cloudogu GmbH}
+\ifoot[]{\color{maincolor} \tiny \textcopyright 2018 Cloudogu GmbH}
 \cfoot[]{}
 \ofoot[\pagemark]{\color{maincolor} \thepage\ von \pageref{LastPage}}
 \pagestyle{scrheadings}
@@ -104,6 +102,10 @@ urlcolor={maincolor}
 \usepackage{scrhack}
 % Enables correct parsing of € symbol
 \usepackage{eurosym}
+\usepackage{tocstyle}
+
+\usepackage[default,osfigures,scale=0.95]{opensans}
+\usepackage[T1]{fontenc}
 
 \addtokomafont{sectioning}{\color{maincolor}}
 
