@@ -7,7 +7,7 @@ a) !,",#,$,%,&,',(,),*,+,-,.
 
 b) :,;,<,>,€,?,@
 
-c) Ä,Ö,Ü,\"s
+c) Ä,Ö,Ü,ß
 
 # Syntax highlighting test
 ```java
@@ -22,8 +22,19 @@ public class HelloWorld
 	}
 }
 ```
-
 [supported languages](https://gist.github.com/cwolfes/ac7edd040b1b1c4a81db50a53c3e5628)
+
+# Table test
+
+
+|   Name  | Age | Height | Weight |
+|:-------:|-----|--------|--------|
+| Michael | 28  | 173    | 200    |
+| Peter   | 32  | 195    | 185    |
+| Hans    | 31  | 152    | 130    |
+| George  | 56  | 145    | 120    |
+| Klaus   | 29  | 165    | 160    |
+
 
 # PlantUml test
 
