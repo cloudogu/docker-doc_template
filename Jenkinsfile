@@ -2,6 +2,14 @@
 import com.cloudogu.ces.cesbuildlib.*
 
 node('docker') {
+
+    properties([
+            // Keep only the last x builds to preserve space
+            buildDiscarder(logRotator(numToKeepStr: '10')),
+            // Don't run concurrent builds for a branch, because they use the same workspace directory
+            disableConcurrentBuilds()
+    ])
+
     Git git = new Git(this)
 
     stage('Checkout') {
