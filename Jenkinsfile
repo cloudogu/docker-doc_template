@@ -1,7 +1,7 @@
 @Library('github.com/cloudogu/ces-build-lib@094c923')
 import com.cloudogu.ces.cesbuildlib.*
 
-node {
+node('docker') {
     Git git = new Git(this)
 
     stage('Checkout') {
