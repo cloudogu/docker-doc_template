@@ -10,23 +10,28 @@ node('docker') {
             disableConcurrentBuilds()
     ])
 
-    Git git = new Git(this)
+    catchError {
 
-    stage('Checkout') {
-        checkout scm
-    }
+        Git git = new Git(this)
 
-    stage('BuildAndPush') {
-        def dockerImage = docker.build("cloudogu/doc_template")
+        stage('Checkout') {
+            checkout scm
+        }
 
-        docker.withRegistry('https://registry.hub.docker.com/', 'dockerHubCredentials') {
-            if (git.isTag()) {
-                dockerImage.push(git.tag)
-            } else if (env.BRANCH_NAME == 'master') {
-                dockerImage.push("latest")
-            } else {
-                echo "Skipping deployment to docker hub because current branch is ${env.BRANCH_NAME}."
+        stage('BuildAndPush') {
+            def dockerImage = docker.build("cloudogu/doc_template")
+
+            docker.withRegistry('https://registry.hub.docker.com/', 'dockerHubCredentials') {
+                if (git.isTag()) {
+                    dockerImage.push(git.tag)
+                } else if (env.BRANCH_NAME == 'master') {
+                    dockerImage.push("latest")
+                } else {
+                    echo "Skipping deployment to docker hub because current branch is ${env.BRANCH_NAME}."
+                }
             }
         }
     }
+
+    mailIfStatusChanged(git.commitAuthorEmail)
 }
