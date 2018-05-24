@@ -10,9 +10,9 @@ node('docker') {
             disableConcurrentBuilds()
     ])
 
-    catchError {
+    Git git = new Git(this)
 
-        Git git = new Git(this)
+    catchError {
 
         stage('Checkout') {
             checkout scm
