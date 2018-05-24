@@ -1,4 +1,4 @@
-@Library('github.com/cloudogu/ces-build-lib@094c923')
+@Library('github.com/cloudogu/ces-build-lib@9eec8e6')
 import com.cloudogu.ces.cesbuildlib.*
 
 node('docker') {
