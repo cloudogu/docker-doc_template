@@ -36,3 +36,6 @@ See [sample.md](resources/sample/sample.md) for more information.
 
 Or [sample.pdf](resources/sample/sample.pdf) for the converted pdf.
 
+## Debugging
+
+* Add `--verbose` before the file parameter, like so: `docker run -v $(pwd):/data cloudogu/doc_template --verbose *.md`
