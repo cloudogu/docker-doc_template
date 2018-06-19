@@ -3,8 +3,6 @@
 % Sets the correct encoding and font
 \usepackage{titlesec}
 \usepackage{titling}
-\usepackage{fontspec}
-\usepackage[utf8]{inputenc}
 
 
 % Use color for fonts etc.
@@ -104,7 +102,9 @@ title=\lstname                   % show the filename of files included with \lst
 \usepackage{eurosym}
 \usepackage{tocstyle}
 
-\usepackage[default,osfigures,scale=0.95]{opensans}
+% font settings
+\usepackage[defaultsans]{droidsans}
+\renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
 \addtokomafont{sectioning}{\color{maincolor}}
