@@ -32,6 +32,10 @@
 
 - Tables
 
+- Long sequences
+
+`\seqsplit{...abc...}`
+
 See [sample.md](resources/sample/sample.md) for more information.
 
 Or [sample.pdf](resources/sample/sample.pdf) for the converted pdf.

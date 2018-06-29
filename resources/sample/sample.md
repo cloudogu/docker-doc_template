@@ -43,3 +43,9 @@ public class HelloWorld
 Bob -> Alice : hello
 @enduml
 ~~~
+
+# Long sequences test
+
+a) \seqsplit{seagasgafasefdasegaewsgwsegsrgasgasergfasegasgasegfsefgaefaefasefsgfsegdrhdfhfdhjdrghsrgsrgsgsrgdhgdhdfthfthdrgsrgsrgfdhgdfhdh}
+
+b) \seqsplit{121424323423647623984721890371082378208478923568374658732469812731827340237492356734659233467293471823018237120837120837182740}
