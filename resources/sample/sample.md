@@ -38,11 +38,9 @@ public class HelloWorld
 
 # PlantUml test
 
-~~~ {.plantuml format="eps"}
-@startuml
+```uml
 Bob -> Alice : hello
-@enduml
-~~~
+```
 
 # Long sequences test
 
