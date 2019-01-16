@@ -1,4 +1,4 @@
-FROM cloudogu/pandoc:0.8.0
+FROM cloudogu/pandoc:0.8.1
 
 LABEL name="cloudogu/doc_template" \
       maintainer="thomas.grosser@cloudogu.com"
