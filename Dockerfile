@@ -1,5 +1,4 @@
-# 0.7.0 seems to break c
-FROM cloudogu/pandoc:0.6.0
+FROM cloudogu/pandoc:0.8.2
 
 LABEL name="cloudogu/doc_template" \
       maintainer="thomas.grosser@cloudogu.com"
