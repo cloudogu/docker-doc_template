@@ -1,20 +1,23 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 \usepackage{lastpage}
 \usepackage[headtopline,headsepline]{scrpage2}
-\setheadtopline{2pt}
-\setheadsepline{2pt}
+
+\setheadtopline{1pt}
+\setheadsepline{1pt}
 \ihead{
   \begin{tabular}{@{}r@{}}
+    \vspace*{0.5cm}
     \begin{picture}(0,0)(0,0)
-    \put(0,-10){
+    \put(3,-25){
       \includegraphics[width=50pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}
     }
     \end{picture}
+    \vspace*{0.5cm}
   \end{tabular}
-  \hspace{0mm}
+  \hspace{5mm}
 }
-\chead{\begin{tabular}{@{}c@{}}\textbf{$title$}\\ $author$\end{tabular}\hspace{3mm}}
-\ohead{\begin{tabular}{@{}r@{}}Version: $version$\\Stand: $date$ \end{tabular}\hspace{3mm}}
+\chead{\begin{tabular}{@{}c@{}}\textbf{$title$}\\ $author$\end{tabular}\hspace{5mm}}
+\ohead{\begin{tabular}{@{}r@{}}Version: $version$\\Stand: $date$ \end{tabular}\hspace{5mm}}
 \cfoot[\pagemark]{\color{black} - Seite \thepage\ von \pageref{LastPage} -}
 \pagestyle{scrheadings}
 
@@ -60,6 +63,8 @@ $endfor$
   \end{titlepage}
 }
 
+
+
 \begin{document}
 
   $if(title)$
@@ -84,15 +89,4 @@ $endfor$
 
   $body$
 
-
-
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?
-
-  %\textit{Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?}
-
-  %\textbf{Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?}
-
-  {\fontseries{m}\selectfont \fontshape{n}\selectfont Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?}
-
-  {\fontseries{m}\selectfont \fontshape{it}\selectfont Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?}
 \end{document}
