@@ -28,6 +28,7 @@ $endfor$
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+%document cover
 \makeatletter
 \renewcommand{\maketitle}{
   \begin{titlepage}
@@ -37,20 +38,21 @@ $endfor$
       \put(30,-30){\includegraphics[width=120pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}}
       \end{picture}
       \begin{tikzpicture}[remember picture,overlay]
-        \node (a) at ([yshift=120]current page.west) {};
-        \node (b) at ([yshift=-120]current page.east) {};
+        \node (a) at ([yshift=3.175cm]current page.west) {};
+        \node (b) at ([yshift=-3.175cm]current page.east) {};
         \filldraw[draw=maincolor, fill=maincolor] (a) rectangle (b);
       \end{tikzpicture}
-      \vspace{7cm}
+ \vspace{8cm}
       \begin{flushright}
         \vspace*{2cm}
-        \color{black}
-        \@title \\
+            \color{white}
+            \@title \\
+        \vspace*{0.5cm}
         \@author \\
-        \vspace*{0.3cm}
+            \vspace*{0.3cm}
       \end{flushright}
 
-
+      
     \end{flushleft}
   \end{titlepage}
 }
@@ -66,19 +68,12 @@ $endfor$
   \maketitle
   $endif$
 
+  % table of content
   $if(toc)$
     {
     \clearpage
     \begingroup
-    \renewcommand*{\chapterpagestyle}{empty}
-    \setheadtopline{2pt}
-    \setheadsepline{2pt}
-    \ihead{\begin{picture}(0,0)(0,0)
-    \put(30,-30){\includegraphics[width=60pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}}
-    \end{picture}}
-    \chead{\textbf{$title$}}
-    \ohead{\textbf{$version$} \newline textbf{$date$}}
-    \cfoot[\pagemark]{\color{black} - Seite \thepage\ von \pageref{LastPage} -}
+      \renewcommand{\chapterpagestyle}{scrheadings}
     \pagestyle{scrheadings}
     \tableofcontents
     \clearpage
