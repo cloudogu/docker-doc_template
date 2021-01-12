@@ -103,12 +103,9 @@ title=\lstname                   % show the filename of files included with \lst
 \usepackage{tikz}
 \usepackage{calc}
 
-% font settings
-
-%\setmainfont[ Path = font/ ]{BundesSans-Regular}
-% font settings
-\usepackage[defaultsans]{droidsans}
-\renewcommand*\familydefault{\sfdefault}
-\usepackage[T1]{fontenc}
-
+% Use custom fonts (.ttf files need to be placed inside the fonts folder)
+\usepackage{fontspec}
+\setmainfont{BundesSans-Regular}
+\setsansfont{BundesSans-Regular}
+\setmonofont{BundesSans-Regular}
 
