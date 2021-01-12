@@ -13,16 +13,19 @@
   \end{tabular}
   \hspace{0mm}
 }
-\chead{\begin{tabular}{@{}r@{}}\textbf{$title$}\\ $author$\end{tabular}\hspace{3mm}}
+\chead{\begin{tabular}{@{}c@{}}\textbf{$title$}\\ $author$\end{tabular}\hspace{3mm}}
 \ohead{\begin{tabular}{@{}r@{}}Version: $version$\\Stand: $date$ \end{tabular}\hspace{3mm}}
 \cfoot[\pagemark]{\color{black} - Seite \thepage\ von \pageref{LastPage} -}
 \pagestyle{scrheadings}
 
+% Disable section, chapter, and subsection numbering
+\setcounter{secnumdepth}{-1}
+
+
 \renewcommand{\chapterpagestyle}{scrheadings}
 $for(header-includes)$
-$header-includes$
+  $header-includes$
 $endfor$
-
 
 % fix for pandoc 1.14
 \providecommand{\tightlist}{%
@@ -57,8 +60,6 @@ $endfor$
   \end{titlepage}
 }
 
-
-
 \begin{document}
 
   $if(title)$
@@ -83,4 +84,15 @@ $endfor$
 
   $body$
 
+
+
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?
+
+  %\textit{Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?}
+
+  %\textbf{Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?}
+
+  {\fontseries{m}\selectfont \fontshape{n}\selectfont Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?}
+
+  {\fontseries{m}\selectfont \fontshape{it}\selectfont Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad animi consectetur consequatur, culpa cum dignissimos dolore ducimus ea exercitationem facilis in iusto laudantium magni natus nesciunt non nulla numquam obcaecati quaerat quam quasi quidem saepe tempore vel! Amet, delectus deserunt dolore eos incidunt modi nesciunt recusandae sint tempora vitae?}
 \end{document}
