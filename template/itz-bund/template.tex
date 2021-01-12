@@ -42,17 +42,17 @@ $endfor$
         \node (b) at ([yshift=-3.175cm]current page.east) {};
         \filldraw[draw=maincolor, fill=maincolor] (a) rectangle (b);
       \end{tikzpicture}
- \vspace{8cm}
+      \vspace{8cm}
       \begin{flushright}
         \vspace*{2cm}
-            \color{white}
-            \@title \\
+        \color{white}
+        \@title \\
         \vspace*{0.5cm}
         \@author \\
-            \vspace*{0.3cm}
+        \vspace*{0.3cm}
       \end{flushright}
 
-      
+
     \end{flushleft}
   \end{titlepage}
 }
@@ -68,12 +68,12 @@ $endfor$
   \maketitle
   $endif$
 
-  % table of content
+% table of content
   $if(toc)$
     {
     \clearpage
     \begingroup
-      \renewcommand{\chapterpagestyle}{scrheadings}
+    \renewcommand{\chapterpagestyle}{scrheadings}
     \pagestyle{scrheadings}
     \tableofcontents
     \clearpage
