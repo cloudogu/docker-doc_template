@@ -4,8 +4,15 @@
 \setheadtopline{2pt}
 \setheadsepline{2pt}
 \ihead{
-  \begin{tabular}{@{}r@{}}\begin{picture}(0,0)(0,0) \put(0,-10){\includegraphics[width=50pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}}
-  \end{picture} \end{tabular}\hspace{0mm}}
+  \begin{tabular}{@{}r@{}}
+    \begin{picture}(0,0)(0,0)
+    \put(0,-10){
+      \includegraphics[width=50pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}
+    }
+    \end{picture}
+  \end{tabular}
+  \hspace{0mm}
+}
 \chead{\begin{tabular}{@{}r@{}}\textbf{$title$}\\ $author$\end{tabular}\hspace{3mm}}
 \ohead{\begin{tabular}{@{}r@{}}Version: $version$\\Stand: $date$ \end{tabular}\hspace{3mm}}
 \cfoot[\pagemark]{\color{black} - Seite \thepage\ von \pageref{LastPage} -}
@@ -13,7 +20,7 @@
 
 \renewcommand{\chapterpagestyle}{scrheadings}
 $for(header-includes)$
-  $header-includes$
+$header-includes$
 $endfor$
 
 
@@ -34,16 +41,16 @@ $endfor$
         \node (b) at ([yshift=-120]current page.east) {};
         \filldraw[draw=maincolor, fill=maincolor] (a) rectangle (b);
       \end{tikzpicture}
- \vspace{7cm}
+      \vspace{7cm}
       \begin{flushright}
         \vspace*{2cm}
-            \color{black}
-            \@title \\
-            \@author \\
-            \vspace*{0.3cm}
+        \color{black}
+        \@title \\
+        \@author \\
+        \vspace*{0.3cm}
       \end{flushright}
 
-      
+
     \end{flushleft}
   \end{titlepage}
 }
@@ -53,17 +60,17 @@ $endfor$
 \begin{document}
 
   $if(title)$
-    \title{\Huge \textbf{$title$}}
-    \author{\Large \textbf{$for(author)$$author$$sep$ \and $endfor$}}
-    \date{\small \textbf{$date$}}
-    \maketitle
+  \title{\Huge \textbf{$title$}}
+  \author{\Large \textbf{$for(author)$$author$$sep$ \and $endfor$}}
+  \date{\small \textbf{$date$}}
+  \maketitle
   $endif$
 
   $if(toc)$
-  {
+    {
     \clearpage
     \begingroup
-      \renewcommand*{\chapterpagestyle}{empty}
+    \renewcommand*{\chapterpagestyle}{empty}
     \setheadtopline{2pt}
     \setheadsepline{2pt}
     \ihead{\begin{picture}(0,0)(0,0)
@@ -73,8 +80,8 @@ $endfor$
     \ohead{\textbf{$version$} \newline textbf{$date$}}
     \cfoot[\pagemark]{\color{black} - Seite \thepage\ von \pageref{LastPage} -}
     \pagestyle{scrheadings}
-      \tableofcontents
-      \clearpage
+    \tableofcontents
+    \clearpage
     \endgroup
   }
   $endif$

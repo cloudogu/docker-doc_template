@@ -7,7 +7,7 @@ GREEN='\033[0;32m'
 echo "Installing custom fonts..."
 FONT_PATH="/usr/local/pandoc/template/${1:-cloudogu}/fonts"
 mkdir -p ~/.local/share/fonts
-cp "${FONT_PATH}"/*ttf ~/.local/share/fonts/
+cp "${FONT_PATH}"/* ~/.local/share/fonts/
 ls ~/.local/share/fonts/
 fc-cache -f
 

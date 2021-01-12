@@ -105,7 +105,16 @@ title=\lstname                   % show the filename of files included with \lst
 
 % Use custom fonts (.ttf files need to be placed inside the fonts folder)
 \usepackage{fontspec}
-\setmainfont{BundesSans-Regular}
-\setsansfont{BundesSans-Regular}
-\setmonofont{BundesSans-Regular}
+\setmainfont{BundesSans}[
+  UprightFont={*-Regular},
+  BoldFont={*-Bold}
+]
+\setsansfont{BundesSans}[
+  UprightFont={*-Regular},
+  BoldFont={*-Bold}
+]
+\setmonofont{BundesSans}[
+  UprightFont={*-Regular},
+  BoldFont={*-Bold}
+]
 
