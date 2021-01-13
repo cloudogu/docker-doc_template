@@ -65,7 +65,11 @@ $endfor$
       \node (a) at ([yshift=3.175cm]current page.west) {};
       \node (b) at ([yshift=-3.175cm]current page.east) {};
       \filldraw[draw=maincolor, fill=maincolor] (a) rectangle (b);
-      \node [anchor=south east] (t) at ([xshift=-60pt,yshift=10pt]current page.east) {{\color{white} \@title}};
+      \node [anchor=south east] (t) at ([xshift=-60pt,yshift=10pt]current page.east) {%
+        \begin{varwidth}{\textwidth}
+        {\color{white} \@title}
+        \end{varwidth}
+      };
       \node [anchor=north east] (t) at ([xshift=-60pt,yshift=-10pt]current page.east) {{\color{white} \@author}};
     \end{tikzpicture}
   \end{titlepage}
