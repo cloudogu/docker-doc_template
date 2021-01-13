@@ -25,9 +25,8 @@ fi
 echo "Installing custom fonts..."
 FONT_PATH="/usr/local/pandoc/template/${SELECTED_TEMPLATE}/fonts"
 if [ ! -z "$(ls -A ${FONT_PATH})" ]; then
-  mkdir -p ~/.local/share/fonts
-  cp "${FONT_PATH}"/* ~/.local/share/fonts/
-  ls ~/.local/share/fonts/
+  mkdir -p /usr/local/share/fonts/
+  cp "${FONT_PATH}"/* /usr/local/share/fonts/
   fc-cache -f
 fi
 

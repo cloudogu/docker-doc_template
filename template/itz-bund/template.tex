@@ -5,32 +5,30 @@
 % Makes the entries in the header non italic
 \setkomafont{pagehead}{\normalfont\normalcolor}
 
-
 % ITZ-Bund header: Left
-\setheadtopline{0.2mm}
-\setheadsepline{0.2mm}
 \ihead{
-  \begin{tabular}{@{}r@{}}
-    \vspace*{0.5cm}
-    \begin{picture}(0,0)(0,0)
-    \put(3,-25){
-      \includegraphics[width=50pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}
-    }
+  \smallskip
+  \begin{tabular}{@{}l@{}}
+    \begin{picture}(50,40)(0,0)
+      \put(0,0){
+        \includegraphics[width=50pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}
+      }
     \end{picture}
-    \vspace*{0.5cm}
   \end{tabular}
   \hspace{5mm}
 }
 % ITZ-Bund header: Middle
 \chead{
+  \smallskip
   \begin{tabular}{@{}l@{}}
     {\fontsize{12}{12}\selectfont \textbf{$title$}} \\
-    {\fontsize{9}{9}\selectfont $author$}
+  {\fontsize{9}{9}\selectfont $author$}
   \end{tabular}
   \hspace{5mm}
 }
 % ITZ-Bund header: Right
 \ohead{
+  \smallskip
   \begin{tabular}{@{}ll@{}}
     {\fontsize{8}{8}\selectfont \textbf{Version:}} & {\fontsize{8}{8}\selectfont $version$} \\
     {\fontsize{8}{8}\selectfont \textbf{Stand:}}   & {\fontsize{8}{8}\selectfont $date$ }
@@ -77,6 +75,8 @@ $endfor$
 %%% Start: Structure for document
 %%%
 \begin{document}
+  \thispagestyle{scrheadings}
+  \pagestyle{scrheadings}
 
   $if(title)$
   \title{{\fontsize{35}{1}\selectfont $title$}}
@@ -90,8 +90,6 @@ $endfor$
     {
     \clearpage
     \begingroup
-    \renewcommand{\chapterpagestyle}{scrheadings}
-    \pagestyle{scrheadings}
     \doublespacing
     % Set all entires at the same depth
     \setcounter{tocdepth}{0}
