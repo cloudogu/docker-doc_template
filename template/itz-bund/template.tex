@@ -5,8 +5,11 @@
 % Makes the entries in the header non italic
 \setkomafont{pagehead}{\normalfont\normalcolor}
 
-\setheadtopline{1pt}
-\setheadsepline{1pt}
+%%%
+%%% Start: ITZ-Bund header
+%%%
+\setheadtopline{0.2mm}
+\setheadsepline{0.2mm}
 \ihead{
   \begin{tabular}{@{}r@{}}
     \vspace*{0.5cm}
@@ -21,13 +24,14 @@
 }
 \chead{\begin{tabular}{@{}c@{}}\textbf{$title$}\\ $author$\end{tabular}\hspace{5mm}}
 \ohead{\begin{tabular}{@{}r@{}}Version: $version$\\Stand: $date$ \end{tabular}\hspace{5mm}}
+
+%Activate page numbers
 \cfoot[\pagemark]{\color{black} - Seite \thepage\ von \pageref{LastPage} -}
-\pagestyle{scrheadings}
 
 % Disable section, chapter, and subsection numbering
 \setcounter{secnumdepth}{-1}
 
-
+% Enable ITZ-Bund Header forl Chapters
 \renewcommand{\chapterpagestyle}{scrheadings}
 $for(header-includes)$
   $header-includes$
@@ -37,42 +41,33 @@ $endfor$
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-%document cover
+%%%
+%%% Start: ITZ-Bund title page
+%%%
 \makeatletter
 \renewcommand{\maketitle}{
   \begin{titlepage}
-    \begin{flushleft}
-
-      \begin{picture}(0,0)(0,0)
-      \put(30,-30){\includegraphics[width=120pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}}
-      \end{picture}
-      \begin{tikzpicture}[remember picture,overlay]
-        \node (a) at ([yshift=3.175cm]current page.west) {};
-        \node (b) at ([yshift=-3.175cm]current page.east) {};
-        \filldraw[draw=maincolor, fill=maincolor] (a) rectangle (b);
-      \end{tikzpicture}
-      \vspace{8cm}
-      \begin{flushright}
-        \vspace*{2cm}
-        \color{white}
-        \@title \\
-        \vspace*{0.5cm}
-        \@author \\
-        \vspace*{0.3cm}
-      \end{flushright}
-
-
-    \end{flushleft}
+    \begin{picture}(0,0)(0,0)
+    \put(30,-30){\includegraphics[width=120pt]{/usr/local/pandoc/template/itz-bund/images/itzbund-logo.png}}
+    \end{picture}
+    \begin{tikzpicture}[remember picture,overlay]
+      \node (a) at ([yshift=3.175cm]current page.west) {};
+      \node (b) at ([yshift=-3.175cm]current page.east) {};
+      \filldraw[draw=maincolor, fill=maincolor] (a) rectangle (b);
+      \node [anchor=south east] (t) at ([xshift=-60pt,yshift=10pt]current page.east) {{\color{white} \@title}};
+      \node [anchor=north east] (t) at ([xshift=-60pt,yshift=-10pt]current page.east) {{\color{white} \@author}};
+    \end{tikzpicture}
   \end{titlepage}
 }
 
-
-
+%%%
+%%% Start: Structure for document
+%%%
 \begin{document}
 
   $if(title)$
-  \title{\Huge \textbf{$title$}}
-  \author{\Large \textbf{$for(author)$$author$$sep$ \and $endfor$}}
+  \title{{\fontsize{35}{1}\selectfont $title$}}
+  \author{{\fontsize{15}{1}\selectfont $for(author)$$author$$sep$ \and $endfor$}}
   \date{\small \textbf{$date$}}
   \maketitle
   $endif$
