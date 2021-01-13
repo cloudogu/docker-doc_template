@@ -101,6 +101,9 @@
 \usepackage{tikz}
 \usepackage{calc}
 
+% Set header space
+\renewcommand*{\chapterheadstartvskip}{\vspace*{0.45cm}}
+
 % Use custom fonts (.ttf files need to be placed inside the fonts folder)
 \usepackage{fontspec}
 \setmainfont{BundesSerif}[
@@ -118,3 +121,10 @@
   BoldFont={*-Bold},
   ItalicFont={*-RegularItalic}
 ]
+
+% Set sizes for the headings
+\setkomafont{chapter}{\fontsize{34}{37}\selectfont}
+\setkomafont{section}{\fontsize{33}{36}\selectfont}
+\setkomafont{subsection}{\fontsize{32}{35}\selectfont}
+\setkomafont{subsubsection}{\fontsize{31}{34}\selectfont}
+\setkomafont{chapterentrydots}{\bfseries}
