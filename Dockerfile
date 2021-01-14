@@ -3,6 +3,9 @@ FROM cloudogu/pandoc:0.8.2
 LABEL name="cloudogu/doc_template" \
       maintainer="thomas.grosser@cloudogu.com"
 
+RUN apt update \
+    && apt install fontconfig -y
+
 RUN mkdir -p /usr/local/pandoc
 
 COPY template /usr/local/pandoc/template/
