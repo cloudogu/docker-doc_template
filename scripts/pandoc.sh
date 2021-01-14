@@ -24,7 +24,7 @@ fi
 # copy all custom fonts from the selected into the system and install them
 echo "Installing custom fonts..."
 FONT_PATH="/usr/local/pandoc/template/${SELECTED_TEMPLATE}/fonts"
-if [ ! -z "$(ls -A ${FONT_PATH})" ]; then
+if [ ! -d "$(ls -A ${FONT_PATH})" ]; then
   mkdir -p /usr/local/share/fonts/
   cp "${FONT_PATH}"/* /usr/local/share/fonts/
   fc-cache -f
