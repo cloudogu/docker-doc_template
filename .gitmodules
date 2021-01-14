@@ -1,0 +1,3 @@
+[submodule "template/itz-bund"]
+	path = template/itz-bund
+	url = git@github.com:cloudogu/docker-doc_template_itzlayout.git
