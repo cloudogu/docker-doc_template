@@ -15,7 +15,7 @@
 
 ## Using the Container
 
-1. Generate a PDF: `docker run -v $(pwd):/data cloudogu/doc_template *.md` in a directory with Markdown files (Use [Panddoc Markdown](http://pandoc.org/MANUAL.html#pandocs-markdown) syntax)
+1. Generate a PDF: `docker run -v $(pwd):/data cloudogu/doc_template <Template-Name> *.md` in a directory with Markdown files (Use [Panddoc Markdown](http://pandoc.org/MANUAL.html#pandocs-markdown) syntax). The Template can be specified since version 0.22.0.
 
 2. Result inside the project root: `document.pdf`
 
@@ -23,8 +23,23 @@
 
 - Add a title page
 
-`% Testpage
- % Cloudogu EcoSystem`
+Syntax:
+```
+% Testpage
+% Cloudogu EcoSystem
+```
+
+Enhanced meta data format:
+```
+---
+title:  'Testpage'
+author:
+- "Cloudogu GmbH"
+version: '1.0'
+date: '23.01.2021' 
+...
+```
+ 
 
 - Syntax highlighting
 
