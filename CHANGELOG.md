@@ -6,7 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v0.23.0] - 2022-04-28
-### Fixed
+## [v0.24.0] - 2022-07-05
 
-- itz-bund template 
+### Fixed
+- floating of figures in itz-bund template
+
+## [v0.23.0] - 2022-04-28
+
+### Fixed
+- overflow of figures in itz-bund template 
