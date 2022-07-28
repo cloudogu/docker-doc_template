@@ -72,7 +72,9 @@ Or [sample.pdf](resources/sample/sample.pdf) for the converted pdf.
 
 ## Release
 
-Before release of this tool, update and release the submodules and update them here with `git submodule update --remote --merge`.
+Before release of this tool, update and release the submodules and update them here with `git submodule update --remote --merge`
+(if you have trouble here, make sure the itz-bund sub-repo's branch is set to the prior released master branch).
+After this just create a regular git-flow release in the docker-doc_template.
 
 ### Release on [Nexus registry](https://ecosystem.cloudogu.com/nexus/?ticket=ST-483-grh-sru8yBb5vuAwKCkW-EiS4Ww-cas#browse/browse:docker-registry:v2%2Fcloudogu)
 Login `docker login ecosystem.cloudogu.com`, login via credentials from ecosystem.
